@@ -11,45 +11,64 @@
   <MyIP/>
   <Shell>bash</Shell>
   <Privileged>false</Privileged>
+
   <Support>https://github.com/geoguy89/cleanarr/issues</Support>
   <Project>https://github.com/geoguy89/cleanarr</Project>
-  <Overview>
-    Adds a second audio track, "Cleaned - English", to shows and films from
-    Sonarr and Radarr, Plex or Jellyfin, with the profanity muted. One file,
-    one extra track: the original audio is untouched and stays the default,
-    and the clean one is picked from the audio menu in Plex or Jellyfin.
 
-    Runs on the CPU as it comes. With an NVIDIA GPU and the Nvidia Driver
-    plugin, add --runtime=nvidia to Extra Parameters (Advanced View).
+  <Overview>
+    Cleanarr is an *arr-inspired, vibe-coded application that mutes profanity in your media.
+    It adds a second audio track, "Cleaned - English" by default, with the swearing silenced. The original is untouched and stays the default — in Plex or Jellyfin you pick the clean one from the audio menu. One file, two tracks, not two copies.
+    
+    Built for a household with a small child in the room, so when anything is uncertain the word gets muted.
   </Overview>
+
+  <Screenshot>https://github.com/geoguy89/cleanarr/blob/main/docs/images/home.jpg?raw=true</Screenshot>
+  <Screenshot>https://github.com/geoguy89/cleanarr/blob/main/docs/images/details.jpg?raw=true</Screenshot>
+
   <Category>MediaApp:Video Tools:Utilities</Category>
+
   <WebUI>http://[IP]:[PORT:8477]/</WebUI>
+
   <TemplateURL>https://raw.githubusercontent.com/geoguy89/unraid-templates/main/cleanarr.xml</TemplateURL>
+
   <Icon>https://raw.githubusercontent.com/geoguy89/cleanarr/main/web/icon.png</Icon>
+
   <ExtraParams>--restart=unless-stopped</ExtraParams>
   <PostArgs/>
   <CPUset/>
+
   <DonateText/>
   <DonateLink/>
+
   <Date>2026-09-26</Date>
+
   <Changes>
 ### 1.0.0
 - First public release.
   </Changes>
-  <Requires>Sonarr and Radarr, Plex, or Jellyfin, with the media mounted at the paths it reports. An NVIDIA GPU and Ollama are optional.</Requires>
+
+  <Requires>
+    Sonarr and Radarr, Plex, or Jellyfin, with the media mounted at the paths it reports. An NVIDIA GPU and Ollama are optional.
+  </Requires>
+
   <Config Name="WebUI" Target="8477" Default="8477" Mode="tcp"
           Description="The Cleanarr web interface." Type="Port"
           Display="always" Required="true" Mask="false">8477</Config>
+
   <Config Name="Config" Target="/config" Default="/mnt/user/appdata/cleanarr" Mode="rw"
           Description="Settings, the job database and the cached transcripts."
           Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/cleanarr</Config>
+
   <Config Name="Media" Target="/data" Default="/mnt/user/data" Mode="rw"
           Description="The CONTAINER PATH must be what your library reports. Sonarr, Radarr and Plex in containers usually report /data/media/..., so /data is right for them. Cleanarr opens those paths unchanged - there is no path rewriting."
           Type="Path" Display="always" Required="true" Mask="false">/mnt/user/data</Config>
+
   <Config Name="NVIDIA_VISIBLE_DEVICES" Target="NVIDIA_VISIBLE_DEVICES" Default="all" Mode=""
           Description="NVIDIA only: the GPU used to transcribe. 'all', or a GPU UUID from nvidia-smi -L. Needs --runtime=nvidia in Extra Parameters."
           Type="Variable" Display="always" Required="false" Mask="false">all</Config>
+
   <Config Name="NVIDIA_DRIVER_CAPABILITIES" Target="NVIDIA_DRIVER_CAPABILITIES" Default="compute,utility" Mode=""
-          Description="NVIDIA only: what the container may use the driver for." Type="Variable"
-          Display="advanced" Required="false" Mask="false">compute,utility</Config>
+          Description="NVIDIA only: what the container may use the driver for."
+          Type="Variable" Display="advanced" Required="false" Mask="false">compute,utility</Config>
+
 </Container>
