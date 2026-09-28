@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Profile>
-    <Maintainer>geoguy89</Maintainer>
-    <Name>Cleanarr</Name>
-    <Support>https://github.com/geoguy89/cleanarr/issues</Support>
-    <Bio>Homelabber, tech-enthusiast, vibe-coder</Bio>
-  </Profile>
+<CommunityApplications>
+    <Profile>
+        Cleanarr: profanity-muted audio tracks for Plex/Jellyfin
+    </Profile>
+    <WebPage>https://github.com/geoguy89/cleanarr</WebPage>
+    <Forum>https://github.com/geoguy89/cleanarr/issues</Forum>
+</CommunityApplications>
