@@ -17,4 +17,4 @@ wget -O /boot/config/plugins/dockerMan/templates-user/my-cleanarr.xml \
   https://raw.githubusercontent.com/geoguy89/unraid-templates/main/cleanarr.xml
 ```
 
-Then Docker → Add Container → Template → cleanarr.
+Then Docker → Add Container → Template → cleanarr
