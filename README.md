@@ -4,7 +4,7 @@ Community Applications templates for Unraid.
 
 | App | Template | Source |
 |-----|----------|--------|
-| Censarr | [cleanarr.xml](cleanarr.xml) | [geoguy89/censarr](https://github.com/geoguy89/censarr) |
+| Censarr | [censarr.xml](censarr.xml) | [geoguy89/censarr](https://github.com/geoguy89/censarr) |
 
 Censarr adds a second audio track, "Censored - English", to shows and films
 with the profanity muted. The original track is untouched and stays the
