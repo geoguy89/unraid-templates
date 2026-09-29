@@ -4,32 +4,32 @@
   Source: https://github.com/geoguy89/cleanarr
 -->
 <Container version="2">
-  <Name>cleanarr</Name>
-  <Repository>ghcr.io/geoguy89/cleanarr:latest</Repository>
-  <Registry>https://github.com/geoguy89/cleanarr/pkgs/container/cleanarr</Registry>
+  <Name>Cens-Arr</Name>
+  <Repository>ghcr.io/geoguy89/censarr:latest</Repository>
+  <Registry>https://github.com/geoguy89/censarr/pkgs/container/censarr</Registry>
   <Network>bridge</Network>
   <MyIP/>
   <Shell>bash</Shell>
   <Privileged>false</Privileged>
 
-  <Support>https://github.com/geoguy89/cleanarr/issues</Support>
-  <Project>https://github.com/geoguy89/cleanarr</Project>
+  <Support>https://github.com/geoguy89/censarr/issues</Support>
+  <Project>https://github.com/geoguy89/censarr</Project>
 
   <Overview>
-    Cleanarr is an *arr-inspired, vibe-coded application that mutes profanity in your media.
-    It adds a second audio track, "Cleaned - English" by default, with the swearing silenced. The original is untouched and stays the default — in Plex or Jellyfin you pick the clean one from the audio menu. One file, two tracks, not two copies.
+    Censarr is an *arr-inspired, vibe-coded application that mutes profanity in your media.
+    It adds a second audio track, "Censored - English" by default, with the swearing silenced. The original is untouched and stays the default — in Plex or Jellyfin you pick the clean one from the audio menu. One file, two tracks, not two copies.
     
     Built for a household with a small child in the room, so when anything is uncertain the word gets muted.
   </Overview>
 
-  <Screenshot>https://github.com/geoguy89/cleanarr/blob/main/docs/images/home.jpg?raw=true</Screenshot>
-  <Screenshot>https://github.com/geoguy89/cleanarr/blob/main/docs/images/details.jpg?raw=true</Screenshot>
+  <Screenshot>https://github.com/geoguy89/censarr/blob/main/docs/images/home.jpg?raw=true</Screenshot>
+  <Screenshot>https://github.com/geoguy89/censarr/blob/main/docs/images/details.jpg?raw=true</Screenshot>
 
   <Category>MediaApp:Video Tools:Utilities</Category>
 
   <WebUI>http://[IP]:[PORT:8477]/</WebUI>
 
-  <TemplateURL>https://raw.githubusercontent.com/geoguy89/unraid-templates/main/cleanarr.xml</TemplateURL>
+  <TemplateURL>https://raw.githubusercontent.com/geoguy89/unraid-templates/main/censarr.xml</TemplateURL>
 
   <Icon>https://raw.githubusercontent.com/geoguy89/cleanarr/main/web/icon.png</Icon>
 
@@ -52,15 +52,15 @@
   </Requires>
 
   <Config Name="WebUI" Target="8477" Default="8477" Mode="tcp"
-          Description="The Cleanarr web interface." Type="Port"
+          Description="The Censarr web interface." Type="Port"
           Display="always" Required="true" Mask="false">8477</Config>
 
-  <Config Name="Config" Target="/config" Default="/mnt/user/appdata/cleanarr" Mode="rw"
+  <Config Name="Config" Target="/config" Default="/mnt/user/appdata/censarr" Mode="rw"
           Description="Settings, the job database and the cached transcripts."
-          Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/cleanarr</Config>
+          Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/censarr</Config>
 
   <Config Name="Media" Target="/data" Default="/mnt/user/data" Mode="rw"
-          Description="The CONTAINER PATH must be what your library reports. Sonarr, Radarr and Plex in containers usually report /data/media/..., so /data is right for them. Cleanarr opens those paths unchanged - there is no path rewriting."
+          Description="The CONTAINER PATH must be what your library reports. Sonarr, Radarr and Plex in containers usually report /data/media/..., so /data is right for them. Censarr opens those paths unchanged - there is no path rewriting."
           Type="Path" Display="always" Required="true" Mask="false">/mnt/user/data</Config>
 
   <Config Name="NVIDIA_VISIBLE_DEVICES" Target="NVIDIA_VISIBLE_DEVICES" Default="all" Mode=""
