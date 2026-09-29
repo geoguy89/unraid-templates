@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!--
-  Community Applications template for Cleanarr.
-  Source: https://github.com/geoguy89/cleanarr
+  Community Applications template for Censarr.
+  Source: https://github.com/geoguy89/censarr
 -->
 <Container version="2">
   <Name>Cens-Arr</Name>
@@ -31,7 +31,7 @@
 
   <TemplateURL>https://raw.githubusercontent.com/geoguy89/unraid-templates/main/censarr.xml</TemplateURL>
 
-  <Icon>https://raw.githubusercontent.com/geoguy89/cleanarr/main/web/icon.png</Icon>
+  <Icon>https://raw.githubusercontent.com/geoguy89/censarr/main/web/icon.png</Icon>
 
   <ExtraParams>--restart=unless-stopped</ExtraParams>
   <PostArgs/>
